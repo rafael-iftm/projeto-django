@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Partners - Contato</title>
+    <link rel="stylesheet" href="../static/contato/contato.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Quality Partners</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre Nós</a></li>
+                <li><a href="/servicos">Serviços</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-hero">
+            <h1>Vamos Conversar</h1>
+            <p>Será um prazer conversar sobre Qualidade e Testes de Software com você</p>
+        </section>
+        <section class="contact-form">
+            <h2>Contato</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="firstName">Nome</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Sobrenome</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Quality Partners. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../static/contato/contato.js"></script>
+</body>
+</html>
