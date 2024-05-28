@@ -36,4 +36,31 @@ django-admin startproject projeto .
 - **Função**: Ponto de entrada para o servidor WSGI (Web Server Gateway Interface).
 - **Detalhes**: Configura a aplicação WSGI para o projeto, permitindo que ele seja servido em servidores compatíveis com WSGI, como Gunicorn.
 
-Cada um desses arquivos desempenha um papel crucial no funcionamento e na organização do seu projeto Django, ajudando a manter o código estruturado, configurado e pronto para desenvolvimento e implantação.
+### Comando `python manage.py collectstatic`
+
+O comando `python manage.py collectstatic` é usado para coletar todos os arquivos estáticos do seu projeto em um único diretório, facilitando a sua gestão e disponibilização.
+
+```python
+python manage.py collectstatic
+```
+
+#### Arquivos Estáticos (CSS, JavaScript, Imagens)
+
+Os arquivos estáticos, como CSS, JavaScript e imagens, são essenciais para a aparência e a funcionalidade do seu site. No Django, você configura e gerencia esses arquivos através de algumas variáveis no arquivo `settings.py`.
+
+```python
+# Configuração para arquivos estáticos
+STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "base_static",
+]
+STATIC_ROOT = BASE_DIR / "static"
+```
+
+- **`STATIC_URL`**: Define a URL pública onde os arquivos estáticos serão acessíveis.
+- **`STATICFILES_DIRS`**: Lista de diretórios onde o Django também deve procurar arquivos estáticos além das aplicações instaladas.
+- **`STATIC_ROOT`**: Diretório onde todos os arquivos estáticos coletados serão armazenados.
+
+Quando você executa o comando `python manage.py collectstatic`, o Django coleta todos os arquivos estáticos das suas aplicações e dos diretórios listados em `STATICFILES_DIRS`, copiando-os para o diretório definido em `STATIC_ROOT`. Isso é especialmente útil em ambientes de produção, onde um servidor web pode servir esses arquivos diretamente.
+
+Para mais informações sobre a gestão de arquivos estáticos no Django, consulte a documentação oficial em [Django Static Files](https://docs.djangoproject.com/en/5.0/howto/static-files/).
