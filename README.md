@@ -75,3 +75,17 @@ Abaixo está a estrutura do projeto Django, ilustrada na imagem. Esta estrutura 
 
 ![Estrutura do Projeto Django](img/estrutura-projeto-django.png)
 
+## Comandos Comuns do Terminal para Projetos Django
+
+| Comando                                  | Descrição                                                                                       |
+|------------------------------------------|-------------------------------------------------------------------------------------------------|
+| `django-admin startproject projectname`  | Cria um novo projeto Django com o nome especificado.                                            |
+| `python manage.py startapp appname`      | Cria uma nova aplicação dentro do projeto Django.                                               |
+| `python manage.py runserver`             | Inicia o servidor de desenvolvimento do Django.                                                 |
+| `python manage.py migrate`               | Aplica as migrações de banco de dados, criando ou alterando tabelas conforme necessário.        |
+| `python manage.py makemigrations`        | Cria novas migrações com base nas mudanças feitas nos modelos do projeto.                       |
+| `python manage.py createsuperuser`       | Cria um superusuário para acessar a administração do Django.                                    |
+| `python manage.py shell -i ipython`                 | Inicia um shell interativo do Django, permitindo executar código Python com o contexto do projeto. |
+| `python manage.py collectstatic`         | Coleta arquivos estáticos de todas as aplicações em um único local para servir em produção.     |
+| `python manage.py test`                  | Executa os testes automatizados do projeto Django.                                              |
+| `python manage.py showmigrations`        | Mostra uma lista de todas as migrações e seu status.                                            |
